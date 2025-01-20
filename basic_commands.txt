@@ -1,0 +1,422 @@
+# man ls
+LS(1)                                                                 User Commands                                                                 LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              with -l, scale sizes by SIZE when printing them; e.g., '--block-size=M'; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with -lt: sort by, and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise:
+              sort by ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+       -D, --dired
+
+#info ls
+Next: dir invocation,  Up: Directory listing
+
+10.1 ‘ls’: List directory contents
+==================================
+
+The ‘ls’ program lists information about files (of any type, including
+directories).  Options and file arguments can be intermixed arbitrarily,
+as usual.
+
+   For non-option command-line arguments that are directories, by
+default ‘ls’ lists the contents of directories, not recursively, and
+omitting files with names beginning with ‘.’.  For other non-option
+arguments, by default ‘ls’ lists just the file name.  If no non-option
+argument is specified, ‘ls’ operates on the current directory, acting as
+if it had been invoked with a single argument of ‘.’.
+
+   By default, the output is sorted alphabetically, according to the
+locale settings in effect.(1)  If standard output is a terminal, the
+output is in columns (sorted vertically) and control characters are
+output as question marks; otherwise, the output is listed one per line
+and control characters are output as-is.
+
+   Because ‘ls’ is such a fundamental program, it has accumulated many
+options over the years.  They are described in the subsections below;
+within each section, options are listed alphabetically (ignoring case).
+The division of options into the subsections is not absolute, since some
+options affect more than one aspect of ‘ls’’s operation.
+
+   Exit status:
+
+     0 success
+     1 minor problems  (e.g., failure to access a file or directory not
+       specified as a command line argument.  This happens when listing a
+       directory in which entries are actively being removed or renamed.)
+     2 serious trouble (e.g., memory exhausted, invalid option, failure
+       to access a file or directory specified as a command line argument
+       or a directory loop)
+
+   Also see *note Common options::.
+
+* Menu:
+
+#whatis ls -> searches a set of database files that contain short descriptions of system commands
+ls (1)               - list directory contents
+
+#apropos ls -> searches the whatis database for strings
+add-shell (8)        - add shells to the list of valid login shells
+blockdev (8)         - call block device ioctls from the command line
+c++filt (1)          - demangle C++ and Java symbols
+credentials (7)      - process identifiers
+dircolors (1)        - color setup for ls
+eatmydata (1)        - transparently disable fsync() and other data-to-disk synchronization calls
+EVP_KDF-TLS13_KDF (7ssl) - The TLS 1.3 EVP_KDF implementation
+EVP_KDF-TLS1_PRF (7ssl) - The TLS1 PRF EVP_KDF implementation
+false (1)            - do nothing, unsuccessfully
+git-credential (1)   - Retrieve and store user credentials
+git-credential-cache--daemon (1) - Temporarily store user credentials in memory
+git-credential-store (1) - Helper to store credentials on disk
+git-difftool (1)     - Show changes using common diff tools
+git-ls-files (1)     - Show information about files in the index and the working tree
+git-ls-remote (1)    - List references in a remote repository
+git-ls-tree (1)      - List the contents of a tree object
+git-mailsplit (1)    - Simple UNIX mbox splitter program
+git-mergetool (1)    - Run merge conflict resolution tools to resolve merge conflicts
+git-mktree (1)       - Build a tree-object from ls-tree formatted text
+gitcredentials (7)   - Providing usernames and passwords to Git
+grub-menulst2cfg (1) - transform legacy menu.lst into grub.cfg
+initramfs-tools (7)  - an introduction to writing scripts for mkinitramfs
+intro (2)            - introduction to system calls
+ip (8)               - show / manipulate routing, network devices, interfaces and tunnels
+logrotate (8)        - rotates, compresses, and mails system logs
+logrotate.conf (5)   - rotates, compresses, and mails system logs
+ls (1)               - list directory contents
+lsattr (1)           - list file attributes on a Linux second extended file system
+lsb_release (1)      - print distribution-specific information
+lsblk (8)            - list block devices
+lscfg (8)            - list hardware configuration
+lscpu (1)            - display information about the CPU architecture
+lshw (1)             - list hardware
+lsinitramfs (8)      - list content of an initramfs image
+lsipc (1)            - show information on IPC facilities currently employed in the system
+lslocks (8)          - list local system locks
+lslogins (1)         - display information about known users in the system
+lsmcode (8)          - list microcode and firmware levels
+lsmem (1)            - list the ranges of available memory with their online status
+lsmod (8)            - Show the status of modules in the Linux Kernel
+lsns (8)             - list namespaces
+lsof (8)             - list open files
+lspci (8)            - list all PCI devices
+lspgpot (1)          - extracts the ownertrust values from PGP keyrings and list them in GnuPG ownertrust format.
+lsslot (8)           - display hot plug capable slots and resources
+lsusb (8)            - list USB devices
+lsvio (8)            - list virtual I/O adapters and devices
+lsvpd (8)            - list Vital Product Data (VPD)
+lvm (8)              - LVM2 tools
+man (1)              - an interface to the system reference manuals
+md5sum.textutils (1) - compute and check MD5 message digest
+tc-mpls (8)          - mpls manipulation module
+nm (1)               - list symbols from object files
+nstat (8)            - network statistics tools.
+ntfsls (8)           - list directory contents on an NTFS filesystem
+ntfsprogs (8)        - tools for doing neat things with NTFS
+openssl-s_client (1ssl) - SSL/TLS client program
+openssl-s_server (1ssl) - SSL/TLS server program
+openssl-s_time (1ssl) - SSL/TLS performance timing program
+openssl-sess_id (1ssl) - SSL/TLS session handling command
+pam_exec (8)         - PAM module which calls an external command
+pam_shells (8)       - PAM module to check for valid login shell
+pkaction (1)         - Get details about a registered action
+poolset (5)          - persistent memory pool configuration file format
+postfix-tls (1)      - Postfix TLS management
+posttls-finger (1)   - Probe the TLS properties of an ESMTP or LMTP server.
+powerpc64le-linux-gnu-c++filt (1) - demangle C++ and Java symbols
+powerpc64le-linux-gnu-nm (1) - list symbols from object files
+powerpc64le-linux-gnu-strip (1) - discard symbols and other data from object files
+protocols (5)        - protocols definition file
+purge-old-kernels (1) - remove old kernel and header packages from the system
+remove-shell (8)     - remove shells from the list of valid login shells
+rtacct (8)           - network statistics tools.
+securetty (5)        - list of terminals on which root is allowed to login
+servicelog_notify (8) - add, view, or remove tools to be notified when events are logged in servicelog
+sg3_utils (8)        - a package of utilities for sending SCSI commands
+sg_referrals (8)     - send SCSI REPORT REFERRALS command
+shells (5)           - pathnames of valid login shells
+signal (7)           - overview of signals
+ssl (7ssl)           - OpenSSL SSL/TLS library
+strace (1)           - trace system calls and signals
+strip (1)            - discard symbols and other data from object files
+systemd-cgls (1)     - Recursively show control group contents
+tc-cbq-details (8)   - Class Based Queueing
+tclsh (1)            - Simple shell containing Tcl interpreter
+tclsh8.6 (1)         - Simple shell containing Tcl interpreter
+textdomain (3)       - set domain for future gettext() calls
+thin_ls (8)          - List thin volumes within a pool.
+tlsmgr (8postfix)    - Postfix TLS session cache and PRNG manager
+tlsproxy (8postfix)  - Postfix TLS proxy
+update-shells (8)    - update the list of valid login shells
+usb-devices (1)      - print USB device details
+watch (1)            - execute a program periodically, showing output fullscreen
+which.debianutils (1) - locate a command
+zipdetails (1)       - display the internal structure of zip files
+
+#date
+Mon Jan 20 10:20:14 AM UTC 2025
+
+#who
+ubuntu   pts/0        2025-01-20 10:13 (136.226.255.9)
+
+#users
+ubuntu
+
+#ls
+ args1.sh
+ args.sh
+ assg2.sh
+'capes for nongraphic characters'
+ contd1.py
+ contd1.sh
+'er Commands                                                                 LS(1)'
+ file1.txt
+ file_handling
+ file_mv.sh
+ file.txt
+ myscript.sh
+ path.sh
+ sample.txt
+ script.txt
+ temp_file
+ test
+ Test
+ test1.sh
+ test.sh
+ test.txt
+ textfile.txt
+'t information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+ xaa
+ xab
+ xac
+
+#cat test.sh
+#!/bin/bash
+
+echo "Enter your name"
+read name
+echo "Your name is $name"
+
+#pwd
+/home/ubuntu
+
+#uname
+Linux
+
+#w
+ 10:28:54 up 17 days,  5:09,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ubuntu   pts/0    136.226.255.9    10:13    1.00s  0.06s  0.00s w
+
+#hostname
+onb-vm3-2
+
+#type cat
+cat is hashed (/usr/bin/cat)
+
+----------------------------------------------
+Assignments
+1. Display the date/time in following formats
+- Full month name, MMM, yy, MMM dd yy, dd/mm/yyyy, hh:mm day, hh:mm:ss AM/PM day dd/mm/yyyy
+#date "+%B"
+January
+
+#date "+%b"
+Jan
+
+#date "+%y"
+25
+
+#date "+%b %d %y"
+Jan 20 25
+
+#date "+%d/%m/%Y"
+20/01/2025
+
+#date "+%H:%M %A"
+11:15 Monday
+
+#date "+%I:%M:%S %p %a %d/%m/%Y"
+11:20:47 AM Mon 20/01/2025
+
+2. Display the calendar for the following
+- current month, current year, September 1752
+
+#cal
+    January 2025      
+Su Mo Tu We Th Fr Sa  
+          1  2  3  4  
+ 5  6  7  8  9 10 11  
+12 13 14 15 16 17 18  
+19 20 21 22 23 24 25  
+26 27 28 29 30 31   
+
+#cal 2025
+                              2025                              
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                     1                     1  
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   2  3  4  5  6  7  8  
+12 13 14 15 16 17 18   9 10 11 12 13 14 15   9 10 11 12 13 14 15  
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  16 17 18 19 20 21 22  
+26 27 28 29 30 31     23 24 25 26 27 28     23 24 25 26 27 28 29  
+                                            30 31                 
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5               1  2  3   1  2  3  4  5  6  7  
+ 6  7  8  9 10 11 12   4  5  6  7  8  9 10   8  9 10 11 12 13 14  
+13 14 15 16 17 18 19  11 12 13 14 15 16 17  15 16 17 18 19 20 21  
+20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28  
+27 28 29 30           25 26 27 28 29 30 31  29 30                 
+                                                                  
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5                  1  2      1  2  3  4  5  6  
+ 6  7  8  9 10 11 12   3  4  5  6  7  8  9   7  8  9 10 11 12 13  
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  14 15 16 17 18 19 20  
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  21 22 23 24 25 26 27  
+27 28 29 30 31        24 25 26 27 28 29 30  28 29 30              
+                      31                                          
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                     1      1  2  3  4  5  6  
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   7  8  9 10 11 12 13  
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  14 15 16 17 18 19 20  
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  21 22 23 24 25 26 27  
+26 27 28 29 30 31     23 24 25 26 27 28 29  28 29 30 31           
+                      30            
+
+#cal 09 1752
+   September 1752     
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30     
+
+3. Use the who command to display
+- no. of users logged in, time of last system boot, current runlevel
+
+#who -q
+ubuntu
+# users=1
+
+#who -b
+         system boot  2025-01-03 05:19
+
+#who -r
+         run-level 5  2025-01-03 05:22
+
+4. Use ls to display
+- all files, including hidden files (these start with a dot), hidden files only, space occupied by each file in KB format, only
+directories, type of files displayed, sorted files 
+
+#ls
+ args1.sh
+ args.sh
+ assg2.sh
+'capes for nongraphic characters'
+ contd1.py
+ contd1.sh
+'er Commands                                                                 LS(1)'
+ file1.txt
+ file_handling
+ file_mv.sh
+ file.txt
+ myscript.sh
+ path.sh
+ sample.txt
+ script.txt
+ temp_file
+ test
+ Test
+ test1.sh
+ test.sh
+ test.txt
+ textfile.txt
+'t information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+ xaa
+ xab
+ xac
+
+#ls -a
+ .
+ ..
+ args1.sh
+ args.sh
+ assg2.sh
+ .bash_history
+ .bash_logout
+ .bashrc
+ .cache
+'capes for nongraphic characters'
+ .config
+ contd1.py
+ contd1.sh
+'er Commands                                                                 LS(1)'
+ file1.txt
+ file_handling
+ file_mv.sh
+ file.txt
+ .firstscript.sh.swp
+ .local
+ myscript.sh
+ path.sh
+ .profile
+ sample.txt
+ script.txt
+ .selected_editor
+ .ssh
+ .swp
+ temp_file
+ test
+ Test
+ test1.sh
+ test.sh
+ test.txt
+ textfile.txt
+'t information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+ .viminfo
+ xaa
+ xab
+ xac
+
+#ls -Ad .*
+.  ..  .bash_history  .bash_logout  .bashrc  .cache  .config  .firstscript.sh.swp  .lesshst  .local  .profile  .selected_editor  .ssh  .swp  .viminfo
