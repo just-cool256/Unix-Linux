@@ -420,3 +420,93 @@ directories, type of files displayed, sorted files
 
 #ls -Ad .*
 .  ..  .bash_history  .bash_logout  .bashrc  .cache  .config  .firstscript.sh.swp  .lesshst  .local  .profile  .selected_editor  .ssh  .swp  .viminfo
+
+#ls -l
+total 132
+-rwxrwxr-x 1 ubuntu ubuntu    29 Jan  9 05:59  args1.sh
+-rwxrwxr-x 1 ubuntu ubuntu   168 Jan  9 09:54  args.sh
+-rw-rw-r-- 1 ubuntu ubuntu    93 Jan  9 07:09  assg2.sh
+-rw-r--r-- 1 ubuntu ubuntu 13067 Jan 20 10:11 'capes for nongraphic characters'
+-rw-rw-r-- 1 ubuntu ubuntu   179 Jan  9 12:10  contd1.py
+-rwxrwxr-x 1 ubuntu ubuntu   185 Jan  9 12:14  contd1.sh
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 'er Commands                                                                 LS(1)'
+-rw-rw-r-- 1 ubuntu ubuntu   330 Jan 14 10:28  file1.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 06:28  file_handling
+-rw-rw-r-- 1 ubuntu ubuntu   211 Jan 10 03:52  file_mv.sh
+-rw-rw-r-- 1 ubuntu ubuntu    42 Jan 13 04:44  file.txt
+-rwxrwxr-x 1 ubuntu ubuntu    38 Jan  9 16:26  myscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu    96 Jan 10 03:27  path.sh
+-rw-rw-r-- 1 ubuntu ubuntu    89 Jan 13 04:08  sample.txt
+-rw-rw-r-- 1 ubuntu ubuntu    40 Jan  9 16:14  script.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  6 12:10  temp_file
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  3 12:40  test
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 03:52  Test
+-rwxrwxr-x 1 ubuntu ubuntu    47 Jan  9 05:14  test1.sh
+-rwxrwxr-x 1 ubuntu ubuntu    73 Jan  9 05:25  test.sh
+-rw-rw-r-- 1 ubuntu ubuntu   150 Jan 13 04:37  test.txt
+-rw-rw-r-- 1 ubuntu ubuntu   136 Jan 13 06:04  textfile.txt
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 't information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+-rw-rw-r-- 1 ubuntu ubuntu    15 Jan 13 04:49  xaa
+-rw-rw-r-- 1 ubuntu ubuntu    20 Jan 13 04:49  xab
+-rw-rw-r-- 1 ubuntu ubuntu     7 Jan 13 04:49  xac
+
+#ls -d */
+file_handling/  temp_file/  test/  Test/
+
+#ls -l
+total 132
+-rwxrwxr-x 1 ubuntu ubuntu    29 Jan  9 05:59  args1.sh
+-rwxrwxr-x 1 ubuntu ubuntu   168 Jan  9 09:54  args.sh
+-rw-rw-r-- 1 ubuntu ubuntu    93 Jan  9 07:09  assg2.sh
+-rw-r--r-- 1 ubuntu ubuntu 13067 Jan 20 10:11 'capes for nongraphic characters'
+-rw-rw-r-- 1 ubuntu ubuntu   179 Jan  9 12:10  contd1.py
+-rwxrwxr-x 1 ubuntu ubuntu   185 Jan  9 12:14  contd1.sh
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 'er Commands                                                                 LS(1)'
+-rw-rw-r-- 1 ubuntu ubuntu   330 Jan 14 10:28  file1.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 06:28  file_handling
+-rw-rw-r-- 1 ubuntu ubuntu   211 Jan 10 03:52  file_mv.sh
+-rw-rw-r-- 1 ubuntu ubuntu    42 Jan 13 04:44  file.txt
+-rwxrwxr-x 1 ubuntu ubuntu    38 Jan  9 16:26  myscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu    96 Jan 10 03:27  path.sh
+-rw-rw-r-- 1 ubuntu ubuntu    89 Jan 13 04:08  sample.txt
+-rw-rw-r-- 1 ubuntu ubuntu    40 Jan  9 16:14  script.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  6 12:10  temp_file
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  3 12:40  test
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 03:52  Test
+-rwxrwxr-x 1 ubuntu ubuntu    47 Jan  9 05:14  test1.sh
+-rwxrwxr-x 1 ubuntu ubuntu    73 Jan  9 05:25  test.sh
+-rw-rw-r-- 1 ubuntu ubuntu   150 Jan 13 04:37  test.txt
+-rw-rw-r-- 1 ubuntu ubuntu   136 Jan 13 06:04  textfile.txt
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 't information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+-rw-rw-r-- 1 ubuntu ubuntu    15 Jan 13 04:49  xaa
+-rw-rw-r-- 1 ubuntu ubuntu    20 Jan 13 04:49  xab
+-rw-rw-r-- 1 ubuntu ubuntu     7 Jan 13 04:49  xac
+
+#ls -lt
+total 132
+-rw-r--r-- 1 ubuntu ubuntu 13067 Jan 20 10:11 'capes for nongraphic characters'
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 't information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 'er Commands                                                                 LS(1)'
+-rw-rw-r-- 1 ubuntu ubuntu   330 Jan 14 10:28  file1.txt
+-rw-rw-r-- 1 ubuntu ubuntu   136 Jan 13 06:04  textfile.txt
+-rw-rw-r-- 1 ubuntu ubuntu    15 Jan 13 04:49  xaa
+-rw-rw-r-- 1 ubuntu ubuntu    20 Jan 13 04:49  xab
+-rw-rw-r-- 1 ubuntu ubuntu     7 Jan 13 04:49  xac
+-rw-rw-r-- 1 ubuntu ubuntu    42 Jan 13 04:44  file.txt
+-rw-rw-r-- 1 ubuntu ubuntu   150 Jan 13 04:37  test.txt
+-rw-rw-r-- 1 ubuntu ubuntu    89 Jan 13 04:08  sample.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 06:28  file_handling
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 03:52  Test
+-rw-rw-r-- 1 ubuntu ubuntu   211 Jan 10 03:52  file_mv.sh
+-rw-rw-r-- 1 ubuntu ubuntu    96 Jan 10 03:27  path.sh
+-rwxrwxr-x 1 ubuntu ubuntu    38 Jan  9 16:26  myscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu    40 Jan  9 16:14  script.txt
+-rwxrwxr-x 1 ubuntu ubuntu   185 Jan  9 12:14  contd1.sh
+-rw-rw-r-- 1 ubuntu ubuntu   179 Jan  9 12:10  contd1.py
+-rwxrwxr-x 1 ubuntu ubuntu   168 Jan  9 09:54  args.sh
+-rw-rw-r-- 1 ubuntu ubuntu    93 Jan  9 07:09  assg2.sh
+-rwxrwxr-x 1 ubuntu ubuntu    29 Jan  9 05:59  args1.sh
+-rwxrwxr-x 1 ubuntu ubuntu    73 Jan  9 05:25  test.sh
+-rwxrwxr-x 1 ubuntu ubuntu    47 Jan  9 05:14  test1.sh
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  6 12:10  temp_file
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  3 12:40  test
