@@ -1,0 +1,240 @@
+-------------Users----------------------------
+#who
+ubuntu   pts/0        2025-01-21 05:08 (167.103.3.90)
+ubuntu   pts/1        2025-01-21 05:59 (136.226.255.9)
+
+#w
+ 06:02:11 up 18 days, 42 min,  2 users,  load average: 0.03, 0.02, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ubuntu   pts/0    167.103.3.90     05:08   53:56   0.02s  0.02s -bash
+ubuntu   pts/1    136.226.255.9    05:59    0.00s  0.02s  0.00s w
+
+#users
+ubuntu ubuntu
+
+#cat /etc/passwd  --> user names and uids are stored in /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:104::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:104:105:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+pollinate:x:105:1::/var/cache/pollinate:/bin/false
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+syslog:x:107:113::/home/syslog:/usr/sbin/nologin
+uuidd:x:108:114::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:109:115::/nonexistent:/usr/sbin/nologin
+tss:x:110:116:TPM software stack,,,:/var/lib/tpm:/bin/false
+landscape:x:111:117::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:112:118:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+osuadmin:x:1000:1000:osuadmin:/var/lib/osuadmin:/bin/bash
+lxd:x:999:100::/var/snap/lxd/common/lxd:/bin/false
+_chrony:x:113:119:Chrony daemon,,,:/var/lib/chrony:/usr/sbin/nologin
+postfix:x:114:121::/var/spool/postfix:/usr/sbin/nologin
+dnsmasq:x:115:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+ubuntu:x:1001:1001:Ubuntu:/home/ubuntu:/bin/bash
+
+#sudo cat /etc/shadow
+root:!$6$S3y2eCRW3c6SjK/l$ym9rE8J7IZvzkJ5SRMYkxp2PrZ98FNkGy/leHLZU0ATm/yQqCA3l74VNLGdMWKPnhJL4JiB7jBDxj5k3.aZlj1:19859:0::7:::
+daemon:*:19769:0:99999:7:::
+bin:*:19769:0:99999:7:::
+sys:*:19769:0:99999:7:::
+sync:*:19769:0:99999:7:::
+games:*:19769:0:99999:7:::
+man:*:19769:0:99999:7:::
+lp:*:19769:0:99999:7:::
+mail:*:19769:0:99999:7:::
+news:*:19769:0:99999:7:::
+uucp:*:19769:0:99999:7:::
+proxy:*:19769:0:99999:7:::
+www-data:*:19769:0:99999:7:::
+backup:*:19769:0:99999:7:::
+list:*:19769:0:99999:7:::
+irc:*:19769:0:99999:7:::
+gnats:*:19769:0:99999:7:::
+nobody:*:19769:0:99999:7:::
+_apt:*:19769:0:99999:7:::
+systemd-network:*:19769:0:99999:7:::
+systemd-resolve:*:19769:0:99999:7:::
+messagebus:*:19769:0:99999:7:::
+systemd-timesync:*:19769:0:99999:7:::
+pollinate:*:19769:0:99999:7:::
+sshd:*:19769:0:99999:7:::
+syslog:*:19769:0:99999:7:::
+uuidd:*:19769:0:99999:7:::
+tcpdump:*:19769:0:99999:7:::
+tss:*:19769:0:99999:7:::
+landscape:*:19769:0:99999:7:::
+fwupd-refresh:*:19769:0:99999:7:::
+osuadmin:$6$Oy83I/kWPhyb8tr.$vywhaKv1tZuyCcdqt7vmm3CMHHN6eDpuisQZHwStphlJFQK1BcwC12/w4O9ujKGZDmHUKbLdurLoWZJPmMOsY/:19859:0:99999:7:::
+lxd:!:19859::::::
+_chrony:*:19859:0:99999:7:::
+postfix:*:19859:0:99999:7:::
+dnsmasq:*:19859:0:99999:7:::
+ubuntu:!:20091:0:99999:7:::
+
+--------------Groups--------------------------------
+
+#groups
+ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev
+
+#id
+uid=1001(ubuntu) gid=1001(ubuntu) groups=1001(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),110(lxd),124(netdev)
+
+#cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,osuadmin,ubuntu
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:ubuntu
+fax:x:21:
+voice:x:22:
+cdrom:x:24:osuadmin,ubuntu
+floppy:x:25:ubuntu
+tape:x:26:
+sudo:x:27:osuadmin,ubuntu
+audio:x:29:ubuntu
+dip:x:30:osuadmin,ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:ubuntu
+sasl:x:45:
+plugdev:x:46:osuadmin,ubuntu
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+messagebus:x:104:
+systemd-timesync:x:105:
+input:x:106:
+sgx:x:107:
+kvm:x:108:
+render:x:109:
+lxd:x:110:osuadmin,ubuntu
+_ssh:x:111:
+crontab:x:112:
+syslog:x:113:
+uuidd:x:114:
+tcpdump:x:115:
+tss:x:116:
+landscape:x:117:
+fwupd-refresh:x:118:
+osuadmin:x:1000:
+_chrony:x:119:
+ssl-cert:x:120:
+postfix:x:121:
+postdrop:x:122:
+rdma:x:123:
+netdev:x:124:ubuntu
+ubuntu:x:1001:
+
+
+#sudo useradd linux
+#sudo passwd linux
+New password:
+Retype new password:
+passwd: password updated successfully
+#su - linux
+Password:
+
+------------------------File Types----------------------
+#ls -l
+total 132
+-rwxrwxr-x 1 ubuntu ubuntu    29 Jan  9 05:59  args1.sh
+-rwxrwxr-x 1 ubuntu ubuntu   168 Jan  9 09:54  args.sh
+-rw-rw-r-- 1 ubuntu ubuntu    93 Jan  9 07:09  assg2.sh
+-rw-r--r-- 1 ubuntu ubuntu 13067 Jan 20 10:11 'capes for nongraphic characters'
+-rw-rw-r-- 1 ubuntu ubuntu   179 Jan  9 12:10  contd1.py
+-rwxrwxr-x 1 ubuntu ubuntu   185 Jan  9 12:14  contd1.sh
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 'er Commands                                                                 LS(1)'
+-rw-rw-r-- 1 ubuntu ubuntu   330 Jan 14 10:28  file1.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 06:28  file_handling
+-rw-rw-r-- 1 ubuntu ubuntu   211 Jan 10 03:52  file_mv.sh
+-rw-rw-r-- 1 ubuntu ubuntu    42 Jan 13 04:44  file.txt
+-rwxrwxr-x 1 ubuntu ubuntu    38 Jan  9 16:26  myscript.sh
+-rw-rw-r-- 1 ubuntu ubuntu    96 Jan 10 03:27  path.sh
+-rw-rw-r-- 1 ubuntu ubuntu    89 Jan 13 04:08  sample.txt
+-rw-rw-r-- 1 ubuntu ubuntu    40 Jan  9 16:14  script.txt
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  6 12:10  temp_file
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  3 12:40  test
+drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 03:52  Test
+-rwxrwxr-x 1 ubuntu ubuntu    47 Jan  9 05:14  test1.sh
+-rwxrwxr-x 1 ubuntu ubuntu    73 Jan  9 05:25  test.sh
+-rw-rw-r-- 1 ubuntu ubuntu   150 Jan 13 04:37  test.txt
+-rw-rw-r-- 1 ubuntu ubuntu   136 Jan 13 06:04  textfile.txt
+-rw-r--r-- 1 ubuntu ubuntu  9898 Jan 20 10:11 't information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+-rw-rw-r-- 1 ubuntu ubuntu    15 Jan 13 04:49  xaa
+-rw-rw-r-- 1 ubuntu ubuntu    20 Jan 13 04:49  xab
+-rw-rw-r-- 1 ubuntu ubuntu     7 Jan 13 04:49  xac
+
+#stat file1.txt ---> display file_name, size, block, filetype, links, file_access_permission, uid, gid etc.
+  File: file1.txt
+  Size: 330             Blocks: 8          IO Block: 4096   regular file
+Device: 802h/2050d      Inode: 394968      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1001/  ubuntu)   Gid: ( 1001/  ubuntu)
+Access: 2025-01-21 06:27:40.660262557 +0000
+Modify: 2025-01-14 10:28:37.413895216 +0000
+Change: 2025-01-14 10:28:37.489892360 +0000
+ Birth: 2025-01-14 10:28:37.413895216 +0000
+
+#cat /etc/fstab -->info about partitions and mount points
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda2 during curtin installation
+/dev/disk/by-uuid/eb64ef91-7eaa-45db-a0ae-f6990c87cea0 / ext4 defaults 0 1
+
+----how many partitions are on your disk
+#cat /proc/partitions 
+major minor  #blocks  name
+
+   7        0      81016 loop0
+   7        2      65764 loop2
+   7        3      40548 loop3
+   7        4      65540 loop4
+   7        5      83248 loop5
+   7        6      40664 loop6
+   8        0   41943040 sda
+   8        1       8192 sda1
+   8        2   41933807 sda2
