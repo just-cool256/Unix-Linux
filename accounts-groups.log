@@ -238,3 +238,126 @@ major minor  #blocks  name
    8        0   41943040 sda
    8        1       8192 sda1
    8        2   41933807 sda2
+
+------inode--------
+#ls -i
+394945  args1.sh
+393229  args.sh
+393226  assg2.sh
+394966 'capes for nongraphic characters'
+393228  contd1.py
+393227  contd1.sh
+394949 'er Commands                                                                 LS(1)'
+394968  file1.txt
+394954  file_handling
+394355  file_mv.sh
+394962  file.txt
+394950  myscript.sh
+394951  path.sh
+394961  sample.txt
+393230  script.txt
+393279  temp_file
+392469  test
+394952  Test
+394943  test1.sh
+394944  test.sh
+394960  test.txt
+394967  textfile.txt
+394964 't information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+394957  xaa
+394963  xab
+394965  xac
+
+--------changing working directory--------------
+ubuntu@onb-vm3-2:~$ cd file_handling
+ubuntu@onb-vm3-2:~/file_handling$
+
+---------------making empty directory-----------
+#mkdir file_commands
+ubuntu@onb-vm3-2:~$ ls
+ args1.sh
+ args.sh
+ assg2.sh
+'capes for nongraphic characters'
+ contd1.py
+ contd1.sh
+'er Commands                                                                 LS(1)'
+ file1.txt
+ file_commands
+ file_handling
+ file_mv.sh
+ file.txt
+ myscript.sh
+ path.sh
+ sample.txt
+ script.txt
+ temp_file
+ test
+ Test
+ test1.sh
+ test.sh
+ test.txt
+ textfile.txt
+'t information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.'
+ xaa
+ xab
+ xac
+
+--------------copy file----------------------
+#cp file1.txt file_commands
+ubuntu@onb-vm3-2:~$ cd file_commands
+ubuntu@onb-vm3-2:~/file_commands$ ls
+file1.txt
+
+--------------removing file------------------
+#rm file1.txt
+ubuntu@onb-vm3-2:~/file_commands$ ls
+ubuntu@onb-vm3-2:~/file_commands$
+
+-------------removing empty directory------------
+#rmdir file_commands
+
+----------moving file from current directory to another-------
+#mv file1.txt file_handling
+
+-----------------------find file------------------
+#find . -name "file1.txt"
+./file_handling/file1.txt
+
+
+#du --> gives the estimate of space used by files/directories
+4       ./.config/procps
+8       ./.config
+20      ./file_handling
+4       ./temp_file
+4       ./.local/share/nano
+8       ./.local/share
+12      ./.local
+4       ./.cache
+8       ./.ssh
+4       ./test
+4       ./Test
+240     .
+
+#df --> estimates the space used by a file system
+Filesystem     1K-blocks    Used Available Use% Mounted on
+tmpfs             412608   14912    397696   4% /run
+/dev/sda2       41180864 3007400  36427852   8% /
+tmpfs            2062848       0   2062848   0% /dev/shm
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs            2062848     640   2062208   1% /run/qemu
+tmpfs             412544      64    412480   1% /run/user/1001
+
+-----------------------Assignments---------------------------
+1. Move a directory (with all files) to another location
+#mv file_commands file_handling 
+
+2. Remove all the files in a directory & then delete the directory
+-ubuntu@onb-vm3-2:~/file_handling/file_commands$ ls
+a1.txt  a2.txt  a3.txt
+-ubuntu@onb-vm3-2:~/file_handling$ rm file_commands/*
+-ubuntu@onb-vm3-2:~/file_handling/file_commands$ ls -a
+.  ..
+-ubuntu@onb-vm3-2:~/file_handling$ rmdir file_commands
+
+3. Find all the C++ (.cpp) files in the home directory and all directories under it.
