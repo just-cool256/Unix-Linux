@@ -510,3 +510,57 @@ drwxrwxr-x 2 ubuntu ubuntu  4096 Jan 10 03:52  Test
 -rwxrwxr-x 1 ubuntu ubuntu    47 Jan  9 05:14  test1.sh
 drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  6 12:10  temp_file
 drwxrwxr-x 2 ubuntu ubuntu  4096 Jan  3 12:40  test
+
+#uname
+Linux
+
+#uptime
+ 10:14:16 up 19 days,  4:54,  1 user,  load average: 0.00, 0.00, 0.00
+
+#which ls
+/usr/bin/ls
+
+#top
+top - 10:21:57 up 19 days,  5:02,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 107 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.0 sy,  0.0 ni, 99.5 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
+MiB Mem :   4029.1 total,    406.8 free,    537.2 used,   3085.1 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   2890.3 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    815 root      20   0  277440  29312  18496 S   0.3   0.7  38:01.26 NetworkManager
+ 157033 root      20   0       0      0      0 I   0.3   0.0   0:00.13 kworker/u4:0-flush-8:0
+ 157253 bharti    20   0   13952   5504   3456 R   0.3   0.1   0:00.03 top
+      1 root      20   0  176960  18816  10304 S   0.0   0.5   0:37.96 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.33 kthreadd
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace
+     13 root      20   0       0      0      0 S   0.0   0.0   0:07.55 ksoftirqd/0
+     14 root      20   0       0      0      0 I   0.0   0.0   5:24.09 rcu_sched
+     15 root      rt   0       0      0      0 S   0.0   0.0   0:02.40 migration/0
+     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1
+     21 root      rt   0       0      0      0 S   0.0   0.0   0:03.15 migration/1
+     22 root      20   0       0      0      0 S   0.0   0.0   0:00.52 ksoftirqd/1
+     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs
+     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq
+     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 eehd
+     29 root      20   0       0      0      0 S   0.0   0.0   0:00.30 khungtaskd
+     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper
+     31 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback
+     32 root      20   0       0      0      0 S   0.0   0.0   0:23.02 kcompactd0
+     33 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+     34 root      39  19       0      0      0 S   0.0   0.0   0:08.14 khugepaged
+     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd
+     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd
+     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio

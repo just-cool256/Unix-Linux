@@ -418,3 +418,181 @@ total 4
 -rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
 -rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.txt
 dr-xr-xr-x 2 bharti bharti 4096 Jan 22 08:02 test_find
+
+----------------links----------------------------
+~$ ls -li
+393079 -rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 class.cpp
+
+~$ ln class.cpp h_class.cpp
+~$ ls -li
+393079 -rw-rw-r-- 2 bharti bharti    0 Jan 22 07:57 class.cpp
+393079 -rw-rw-r-- 2 bharti bharti    0 Jan 22 07:57 h_class.cpp
+
+~$ ln class.cpp h2_class.cpp
+~$ ls -li
+393079 -rw-rw-r-- 3 bharti bharti    0 Jan 22 07:57 class.cpp
+393079 -rw-rw-r-- 3 bharti bharti    0 Jan 22 07:57 h2_class.cpp
+393079 -rw-rw-r-- 3 bharti bharti    0 Jan 22 07:57 h_class.cpp
+
+~$ cat h_class.cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+        cout<<"hello"<<endl;
+}
+
+~$ cat h2_class.cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+        cout<<"hello"<<endl;
+}
+
+~$ rm class.cpp
+~$ cat h_class.cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+        cout<<"hello"<<endl;
+}
+
+~$ ls -li
+393079 -rw-rw-r-- 2 bharti bharti   78 Jan 22 09:18 h2_class.cpp
+393079 -rw-rw-r-- 2 bharti bharti   78 Jan 22 09:18 h_class.cpp
+~$ vi h_class.cpp
+~$ cat h2_class.cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+        cout<<"hello"<<endl;
+        return 0;
+}
+
+###soft link
+~$ ls -li
+393078 -rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
+~$ ln -s hello.cpp s_hello.cpp
+~$ ls -li
+393078 -rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
+393090 lrwxrwxrwx 1 bharti bharti    9 Jan 22 09:34 s_hello.cpp -> hello.cpp
+##deleting original file make its soft link dangling link
+
+
+-------------------history------------------------------
+~$ history
+    1  ls
+    2  clear
+    3  ls -a
+    4  touch hello.cpp
+    5  touch class.cpp
+    6  touch hello.txt
+    7  touch class.log
+    8  touch barb
+    9  clear
+   10  ls
+   11  mkdir test_find
+   12  cd test_find/
+   13  ls
+   14  ls -a
+   15  touch abc{1..3}.cpp
+   16  ls
+   17  touch abc{1..3}.log
+   18  ls
+   19  cd ..
+   20  ls -a
+   21  find . -name "*.cpp"
+   22  find /home -name "*.cpp"
+   23  sudo /home -name "*.cpp"
+   24  sudo find /home -name "*.cpp"
+   25  ls -a
+   26  ls
+   27  cd test_find
+   28  ls
+   29  cd ..
+   30  find . -name "*.cpp"
+   31  pwd
+   32  du /home/bharti
+   33  du -h /home/bharti
+   34  du -hk /home/bharti
+   35  du -k /home/bharti
+   36  du /home
+   37  du /
+   38  du -h /etc
+   39  du -k /etc
+   40  du .
+   41  du -k .
+   42  df
+   43  df -h
+   44  ls
+   45  ls -l
+   46  chmod 660 barb
+   47  ls -l
+   48  chmod 664 barb
+   49  ls -l
+   50  chmod g-w, o-r class.cpp
+   51  chmod g-w class.cpp
+   52  ls -l
+   53  chmod g+w class.cpp
+   54  ls -l
+   55  chmod u-w, g-w, o-r class.cpp
+   56  chmod u-w, g-w, o-r test_find
+   57  chmod u-w g-w o-r test_find
+   58  chmod ug-w test_find
+   59  ls -l
+   60  chmod ug+w test_find
+   61  unmask
+   62  ls
+   63  ls -li
+   64  ls -i
+   65  ls -li
+   66  ln class.cpp h_class.cpp
+   67  ls -li
+   68  ln class.cpp h2_class.cpp
+   69  ls -li
+   70  vi class.cpp
+   71  cat h_class.cpp
+   72  cat h2_class.cpp
+   73  rm class.cpp
+   74  cat h_class.cpp
+   75  ls -li
+   76  vi h_class.cpp
+   77  cat h2_class.cpp
+   78  ln hello.cpp s_hello.cpp
+   79  rm s_hello.cpp
+   80  ls -i
+   81  ln -s hello.cpp s_hello.cpp
+   82  ls -li
+   83  rm hello.cpp
+   84  ls -li
+   85  rm s_hello.cpp
+   86  ls -l
+   87  history
+
+~$ history 4
+   85  rm s_hello.cpp
+   86  ls -l
+   87  history
+   88  history 4
+
+~$ !! --> repeat previous command
+history 4
+   85  rm s_hello.cpp
+   86  ls -l
+   87  history
+   88  history 4
+
+~$ !5  --> reapeat 5th command
+touch class.cpp
+~$ ls -l
+total 12
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 barb
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 10:07 class.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 class.log
+-rw-rw-r-- 2 bharti bharti   89 Jan 22 09:25 h2_class.cpp
+-rw-rw-r-- 2 bharti bharti   89 Jan 22 09:25 h_class.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.txt
+drwxrwxr-x 2 bharti bharti 4096 Jan 22 08:02 test_find
