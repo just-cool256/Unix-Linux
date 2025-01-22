@@ -361,3 +361,60 @@ a1.txt  a2.txt  a3.txt
 -ubuntu@onb-vm3-2:~/file_handling$ rmdir file_commands
 
 3. Find all the C++ (.cpp) files in the home directory and all directories under it.
+~$ ls
+barb  class.cpp  class.log  hello.cpp  hello.txt  test_find
+~$ cd test_find
+~/test_find$ ls
+abc1.cpp  abc1.log  abc2.cpp  abc2.log  abc3.cpp  abc3.log
+~/test_find$ cd ..
+~$ find . -name "*.cpp"
+./test_find/abc3.cpp
+./test_find/abc2.cpp
+./test_find/abc1.cpp
+./class.cpp
+./hello.cpp
+
+4. Check how much space your home directory is using. Display in kilo bytes
+bharti@onb-vm3-2:~$ du -k .
+4       ./test_find
+20      .
+
+5. Display the total capacity of the disk drive along with the free & used space
+ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           403M   15M  389M   4% /run
+/dev/sda2        40G  2.9G   35G   8% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           2.0G  640K  2.0G   1% /run/qemu
+tmpfs           403M   64K  403M   1% /run/user/1001
+
+----------------changing file permission--------------------
+ ls -l
+total 4
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 barb
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 class.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 class.log
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.txt
+drwxrwxr-x 2 bharti bharti 4096 Jan 22 08:02 test_find
+
+~$ chmod 660 barb
+~$ ls -l
+total 4
+-rw-rw---- 1 bharti bharti    0 Jan 22 07:58 barb
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 class.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 class.log
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.txt
+drwxrwxr-x 2 bharti bharti 4096 Jan 22 08:02 test_find
+
+~$ chmod ug-w test_find
+~$ ls -l
+total 4
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 barb
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 class.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:58 class.log
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.cpp
+-rw-rw-r-- 1 bharti bharti    0 Jan 22 07:57 hello.txt
+dr-xr-xr-x 2 bharti bharti 4096 Jan 22 08:02 test_find
