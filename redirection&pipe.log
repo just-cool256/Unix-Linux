@@ -1,0 +1,126 @@
+--------------redirection--------------------
+~$ echo "hello, world" > hello.txt
+~$ cat hello.txt
+hello, world
+
+~$ ls
+~$ ps -e > processes.txt
+~$ ls
+processes.txt
+~$ cat processes.txt
+    PID TTY          TIME CMD
+      1 ?        00:00:40 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_rude_
+     12 ?        00:00:00 rcu_tasks_trace
+     13 ?        00:00:08 ksoftirqd/0
+     14 ?        00:05:41 rcu_sched
+     15 ?        00:00:02 migration/0
+     16 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:00 idle_inject/1
+     21 ?        00:00:03 migration/1
+     22 ?        00:00:00 ksoftirqd/1
+     24 ?        00:00:00 kworker/1:0H-events_highpri
+     25 ?        00:00:00 kdevtmpfs
+     26 ?        00:00:00 inet_frag_wq
+     27 ?        00:00:00 kauditd
+     28 ?        00:00:00 eehd
+     29 ?        00:00:00 khungtaskd
+     30 ?        00:00:00 oom_reaper
+     31 ?        00:00:00 writeback
+     32 ?        00:00:24 kcompactd0
+     33 ?        00:00:00 ksmd
+     34 ?        00:00:08 khugepaged
+     80 ?        00:00:00 kintegrityd
+     81 ?        00:00:00 kblockd
+     82 ?        00:00:00 blkcg_punt_bio
+     83 ?        00:00:00 tpm_dev_wq
+     84 ?        00:00:00 ata_sff
+     85 ?        00:00:00 md
+     86 ?        00:00:00 edac-poller
+     87 ?        00:00:00 devfreq_wq
+     88 ?        00:00:00 watchdogd
+     92 ?        00:00:04 kworker/0:1H-kblockd
+     93 ?        00:00:00 kswapd0
+     94 ?        00:00:00 ecryptfs-kthrea
+     96 ?        00:00:00 kthrotld
+     97 ?        00:00:00 khvcd
+     99 ?        00:00:00 vfio-irqfd-clea
+    100 ?        00:00:00 mld
+    101 ?        00:00:00 ipv6_addrconf
+    111 ?        00:00:00 kstrp
+    114 ?        00:00:00 zswap-shrink
+    115 ?        00:00:00 kworker/u5:0
+    120 ?        00:00:00 charger_manager
+    143 ?        00:00:03 kworker/1:1H-kblockd
+    166 ?        00:00:00 scsi_eh_0
+    167 ?        00:00:02 hwrng
+    168 ?        00:00:00 scsi_tmf_0
+    221 ?        00:00:00 raid5wq
+    331 ?        00:00:11 jbd2/sda2-8
+    332 ?        00:00:00 ext4-rsv-conver
+    398 ?        00:00:35 systemd-journal
+    423 ?        00:00:00 kaluad
+    424 ?        00:00:00 kmpath_rdacd
+    431 ?        00:00:00 kmpathd
+    432 ?        00:00:00 kmpath_handlerd
+    433 ?        00:02:35 multipathd
+    437 ?        00:00:02 systemd-udevd
+    748 ?        00:00:07 systemd-network
+    814 ?        00:00:04 dbus-daemon
+    815 ?        00:39:58 NetworkManager
+    821 ?        00:00:00 iprdump
+    822 ?        00:00:35 irqbalance
+    823 ?        00:00:00 networkd-dispat
+    824 ?        00:00:00 polkitd
+    825 ?        00:00:06 rsyslogd
+    831 ?        00:00:02 systemd-logind
+    832 ?        00:00:02 udisksd
+    843 ?        00:00:00 iprupdate
+    844 ?        00:00:00 iprinit
+    846 ?        00:00:00 rtas_errd
+    872 ?        00:06:42 fail2ban-server
+    874 ?        00:00:00 unattended-upgr
+    908 ?        00:00:02 chronyd
+    934 ?        00:00:00 chronyd
+   1036 ?        00:00:02 cron
+   1080 hvc0     00:00:00 agetty
+   1161 tty1     00:00:00 agetty
+   1866 ?        00:00:04 master
+   1868 ?        00:00:02 qmgr
+   8619 ?        00:00:04 packagekitd
+  21440 ?        00:00:11 sshd
+  22261 ?        00:00:00 ModemManager
+  81957 ?        00:00:04 wpa_supplicant
+ 110431 ?        00:01:09 snapd
+ 165195 ?        00:00:01 kworker/0:0-mm_percpu_wq
+ 171536 ?        00:00:00 kworker/0:2
+ 171672 ?        00:00:00 sshd
+ 171675 ?        00:00:00 systemd
+ 171676 ?        00:00:00 (sd-pam)
+ 171681 ?        00:00:00 kworker/1:2-mm_percpu_wq
+ 171751 ?        00:00:00 sshd
+ 171759 pts/0    00:00:00 bash
+ 171768 pts/0    00:00:00 su
+ 171769 pts/0    00:00:00 bash
+ 171903 ?        00:00:00 kworker/u4:3-flush-8:0
+ 172007 ?        00:00:00 kworker/u4:5-flush-8:0
+ 172066 ?        00:00:00 cleanup
+ 172100 ?        00:00:00 pickup
+ 172155 ?        00:00:00 trivial-rewrite
+ 172169 ?        00:00:00 kworker/1:0-events
+ 172211 ?        00:00:00 local
+ 172239 ?        00:00:00 kworker/u4:1-events_unbound
+ 172306 ?        00:00:00 kworker/u4:0-events_unbound
+ 172310 pts/0    00:00:00 ps
+~$ wc -l < processes.txt
+113
+

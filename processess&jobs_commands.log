@@ -1,0 +1,61 @@
+
+~$ top -u bharti
+top - 10:24:12 up 19 days,  5:04,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 107 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   4029.1 total,    406.8 free,    537.2 used,   3085.1 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   2890.3 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+ 155452 bharti    20   0   10752   7360   5056 S   0.0   0.2   0:00.16 bash
+ 157258 bharti    20   0   13952   5568   3456 R   0.0   0.1   0:00.01 top
+
+-------------running process in foreground and background-----------
+~$ sleep 100 &
+[1] 171920
+~$ jobs
+[1]+  Running                 sleep 100 &
+~$ fg 1
+sleep 100
+^Z
+[1]+  Stopped                 sleep 100
+~$ bg 1
+[1]+ sleep 100 &
+~$ jobs
+[1]+  Running                 sleep 100 &
+~$ kill %1
+[1]+  Terminated              sleep 100
+~$ jobs
+~$
+----------------------cron hourly, daily, weekly, monthly jobs file-------------------
+/etc$ ls -l cron*
+-rw-r--r-- 1 root root 1136 Mar 23  2022 crontab
+
+cron.d:
+total 4
+-rw-r--r-- 1 root root 206 Jan  8  2022 e2scrub_all
+
+cron.daily:
+total 24
+-rwxr-xr-x 1 root root  376 Nov 11  2019 apport
+-rwxr-xr-x 1 root root 1478 Apr  8  2022 apt-compat
+-rwxr-xr-x 1 root root  123 Dec  5  2021 dpkg
+-rwxr-xr-x 1 root root  377 May 25  2022 logrotate
+-rwxr-xr-x 1 root root 1330 Mar 17  2022 man-db
+-rwxr-xr-x 1 root root  166 Feb 15  2022 run_diag_encl
+
+cron.hourly:
+total 0
+
+cron.monthly:
+total 0
+
+cron.weekly:
+total 4
+-rwxr-xr-x 1 root root 1020 Mar 17  2022 man-db
+-------------------crontab-----------------------
+~$ crontab -l
+* * * * * echo "hello, bharti\nThis message is supposed to print every minute every hour every day every month"
+~$ crontab -r
+~$ crontab -l
+no crontab for bharti
