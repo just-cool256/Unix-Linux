@@ -1,0 +1,191 @@
+-------------sort-------------------------
+~$ cat suits_cast.txt
+Jessica Pearson
+Harvey Spector
+Mike Ross
+Louis Litt
+Donna Paulsen
+Rachel Zane
+Jenny Griffith
+Trevor
+Daniel Hardman
+Sheila Sazs
+Travis Tanner
+Rachel Zane
+
+~$ sort suits_cast.txt
+Daniel Hardman
+Donna Paulsen
+Harvey Spector
+Jenny Griffith
+Jessica Pearson
+Louis Litt
+Mike Ross
+Rachel Zane
+Rachel Zane
+Sheila Sazs
+Travis Tanner
+Trevor
+
+~$ sort -k2 suits_cast.txt
+Trevor
+Jenny Griffith
+Daniel Hardman
+Louis Litt
+Donna Paulsen
+Jessica Pearson
+Mike Ross
+Sheila Sazs
+Harvey Spector
+Travis Tanner
+Rachel Zane
+Rachel Zane
+
+~$ sort -r suits_cast.txt
+Trevor
+Travis Tanner
+Sheila Sazs
+Rachel Zane
+Rachel Zane
+Mike Ross
+Louis Litt
+Jessica Pearson
+Jenny Griffith
+Harvey Spector
+Donna Paulsen
+Daniel Hardman
+
+------------------uniq-------------------
+#it works with sort
+~$ sort suits_cast.txt | uniq
+Daniel Hardman
+Donna Paulsen
+Harvey Spector
+Jenny Griffith
+Jessica Pearson
+Louis Litt
+Mike Ross
+Rachel Zane
+Sheila Sazs
+Travis Tanner
+Trevor
+
+~$ sort suits_cast.txt | uniq -c
+      1 Daniel Hardman
+      1 Donna Paulsen
+      1 Harvey Spector
+      1 Jenny Griffith
+      1 Jessica Pearson
+      1 Louis Litt
+      1 Mike Ross
+      2 Rachel Zane
+      1 Sheila Sazs
+      1 Travis Tanner
+      1 Trevor
+
+~$ sort suits_cast.txt | uniq -d
+Rachel Zane
+
+---------------------------head---------------------
+~$ cat -n suits_cast.txt
+     1  Jessica Pearson
+     2  Harvey Spector
+     3  Mike Ross
+     4  Louis Litt
+     5  Donna Paulsen
+     6  Rachel Zane
+     7  Jenny Griffith
+     8  Trevor
+     9  Daniel Hardman
+    10  Sheila Sazs
+    11  Travis Tanner
+    12  Rachel Zane
+
+~$ head suits_cast.txt  -->default shows 10 lines
+Jessica Pearson
+Harvey Spector
+Mike Ross
+Louis Litt
+Donna Paulsen
+Rachel Zane
+Jenny Griffith
+Trevor
+Daniel Hardman
+Sheila Sazs
+
+~$ head -5 suits_cast.txt
+Jessica Pearson
+Harvey Spector
+Mike Ross
+Louis Litt
+Donna Paulsen
+
+---------------------tail---------------------------
+~$ tail suits_cast.txt
+Mike Ross
+Louis Litt
+Donna Paulsen
+Rachel Zane
+Jenny Griffith
+Trevor
+Daniel Hardman
+Sheila Sazs
+Travis Tanner
+Rachel Zane
+
+~$ tail -5 suits_cast.txt
+Trevor
+Daniel Hardman
+Sheila Sazs
+Travis Tanner
+Rachel Zane
+
+---------------------------------------------------
+~$ cut -d: -f1 /etc/passwd | sort | uniq
+_apt
+backup
+bharti
+bin
+_chrony
+daemon
+dnsmasq
+fwupd-refresh
+games
+gnats
+irc
+landscape
+linux
+list
+lp
+lxd
+mail
+man
+messagebus
+news
+nobody
+osuadmin
+pollinate
+postfix
+proxy
+root
+sshd
+sync
+sys
+syslog
+systemd-network
+systemd-resolve
+systemd-timesync
+tcpdump
+tss
+ubuntu
+uucp
+uuidd
+www-data
+
+-------------------------------------------------
+~$ cut -d: -f1 /etc/passwd | sort | uniq | wc -l
+39
+-----------------------tr-------------------
+~$ echo "hello world" | tr "[:lower:]" "[:upper:]"
+HELLO WORLD
+
